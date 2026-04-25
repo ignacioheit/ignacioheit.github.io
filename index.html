@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Ignacio Heit - Arquitecto IT | Especialista en Infraestructura y DevOps</title>
+    
+    <!-- ===== META TAGS MEJORADOS PARA SEO Y REDES SOCIALES ===== -->
+    <title>Ignacio Heit | Especialista en Soporte IT & DevOps</title>
+    <meta name="description" content="Portafolio profesional de Ignacio Heit - Especialista en Soporte IT, Sysadmin Ssr con experiencia en infraestructura crítica, virtualización, ciberseguridad y DevOps. +6 años de experiencia.">
+    <meta name="keywords" content="Ignacio Heit, Soporte IT, Sysadmin, DevOps, Windows Server, Linux, Virtualización, Ciberseguridad, Fortinet, PowerShell, Bash, Desarrollo Web, Aplicaciones">
+    <meta name="author" content="Ignacio Heit">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ignacio Heit | Especialista en Soporte IT & DevOps">
+    <meta property="og:description" content="Portafolio profesional - Sysadmin Ssr con +6 años de experiencia en infraestructura crítica y ciberseguridad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ignacioheit.github.io">
+    <meta property="og:image" content="https://i.postimg.cc/6QgJg1S7/PERFIL-GENERAL.jpg">
+    <meta property="og:image:alt" content="Ignacio Heit - Perfil profesional">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ignacio Heit | Especialista en Soporte IT & DevOps">
+    <meta name="twitter:description" content="Portafolio profesional - Sysadmin Ssr con +6 años de experiencia">
+    <meta name="twitter:image" content="https://i.postimg.cc/6QgJg1S7/PERFIL-GENERAL.jpg">
+    
+    <link rel="canonical" href="https://ignacioheit.github.io">
+    
+    <!-- ===== FAVICON ANIMADO ===== -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%236c63ff'%3E%3Canimate attributeName='r' values='45;48;45' dur='1.5s' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='35' fill='%23e63946'%3E%3Canimate attributeName='r' values='35;38;35' dur='1.5s' repeatCount='indefinite' /%3E%3C/circle%3E%3Ctext x='50' y='67' text-anchor='middle' fill='white' font-size='40' font-weight='bold'%3EIH%3C/text%3E%3C/svg%3E">
+    
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
@@ -89,7 +115,7 @@
             box-shadow: 0 0 20px var(--accent-glow);
         }
 
-        /* Hero con partículas */
+        /* Hero */
         .hero {
             position: relative;
             background: var(--header-bg);
@@ -132,26 +158,22 @@
             background-clip: text;
             color: transparent;
         }
-        .typewriter {
-            font-family: monospace;
-            border-right: 2px solid var(--accent-orange);
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-        }
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             margin-top: 1rem;
         }
-        .contact-info span {
+        .contact-info a, .contact-info span {
             background: rgba(108, 99, 255, 0.15);
             padding: 0.4rem 1rem;
             border-radius: 40px;
             font-size: 0.85rem;
             backdrop-filter: blur(5px);
+            text-decoration: none;
+            color: var(--text-primary);
         }
+        .contact-info a:hover { background: var(--accent-violet); }
 
         /* Stats */
         .stats-row {
@@ -220,14 +242,8 @@
             from { opacity: 0; transform: scale(0.8); }
             to { opacity: 1; transform: scale(1); }
         }
-        .modal-content h3 {
-            color: var(--accent-red);
-            margin-bottom: 1rem;
-        }
-        .modal-content ul {
-            margin-left: 1.5rem;
-            margin-top: 1rem;
-        }
+        .modal-content h3 { color: var(--accent-red); margin-bottom: 1rem; }
+        .modal-content ul { margin-left: 1.5rem; margin-top: 1rem; }
         .close-modal {
             background: var(--accent-red);
             border: none;
@@ -236,16 +252,16 @@
             color: white;
             cursor: pointer;
             margin-top: 1rem;
-            transition: 0.2s;
         }
         .close-modal:hover { background: var(--accent-orange); }
 
         /* Skill bars */
         .skill-bar-bg {
             background: var(--border-color);
-            height: 10px;
+            height: 6px;
             border-radius: 10px;
             overflow: hidden;
+            margin-top: 0.5rem;
         }
         .skill-bar-fill {
             width: 0%;
@@ -253,26 +269,6 @@
             background: linear-gradient(90deg, var(--accent-red), var(--accent-violet));
             border-radius: 10px;
             transition: width 1s ease-out;
-        }
-
-        /* Timeline */
-        .timeline-horizontal {
-            display: flex;
-            overflow-x: auto;
-            gap: 1rem;
-            padding: 1rem 0;
-        }
-        .timeline-node {
-            min-width: 180px;
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 1rem;
-            border-top: 3px solid var(--accent-orange);
-            transition: all 0.3s;
-        }
-        .timeline-node:hover {
-            transform: translateY(-5px);
-            border-top-color: var(--accent-red);
         }
 
         .grid-2col {
@@ -295,16 +291,58 @@
             padding-left: 1rem;
             margin-bottom: 1rem;
         }
-        .skill-badge {
-            background: var(--tag-bg);
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin: 0.2rem;
-            border: 1px solid var(--accent-violet);
+
+        /* ===== STACK TECNOLÓGICO - GRID SIMÉTRICO ===== */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        .tool-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(108, 99, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+        .tool-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-red);
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+        }
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--accent-violet), var(--accent-red));
+            border-radius: 50%;
+            animation: floatIcon 3s ease-in-out infinite;
+        }
+        .tool-icon i {
+            color: white;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .tool-item h4 {
+            font-size: 0.85rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent-orange);
+        }
+        .tool-item p {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
         }
 
+        /* Social links */
         .social-links {
             display: flex;
             gap: 1rem;
@@ -324,46 +362,291 @@
             transform: scale(1.05);
         }
 
-        @media print {
-            .toolbar, .social-links, .modal, #particles-js { display: none; }
+        /* ===== SECCIÓN PROYECTOS CENTRADA - SIN DESFASE ===== */
+        .proyectos-section {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
         }
-        @media (max-width: 900px) {
+        .proyectos-section .section-title {
+            text-align: center;
+            border-left: none;
+            display: inline-block;
+            padding-left: 0;
+            border-bottom: 3px solid var(--accent-red);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .carousel-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0.5rem 2rem;
+        }
+        .carousel {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            padding: 1rem 0.5rem;
+            scroll-snap-type: x mandatory;
+            justify-content: center;
+        }
+        .carousel::-webkit-scrollbar { height: 6px; }
+        .carousel::-webkit-scrollbar-track { background: var(--border-color); border-radius: 10px; }
+        .carousel::-webkit-scrollbar-thumb { background: var(--accent-violet); border-radius: 10px; }
+        .proyecto-card {
+            flex: 0 0 280px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 1px solid var(--accent-violet);
+            transition: all 0.3s ease;
+            scroll-snap-align: center;
+            cursor: pointer;
+        }
+        .proyecto-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-red);
+            box-shadow: 0 0 30px rgba(230, 57, 70, 0.2);
+        }
+        .proyecto-icono {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--accent-violet), var(--accent-red));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(108, 99, 255, 0); }
+        }
+        .proyecto-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--accent-orange); }
+        .proyecto-card p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }
+        .proyecto-badge {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.3);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent-violet);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+            transition: 0.2s;
+            z-index: 10;
+        }
+        .carousel-btn:hover {
+            background: var(--accent-red);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .carousel-btn.prev { left: 0; }
+        .carousel-btn.next { right: 0; }
+
+        /* Botón Volver Arriba */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-violet);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            background: var(--accent-red);
+            transform: translateY(-5px);
+        }
+
+        /* Skill badges */
+        .skill-badge {
+            background: var(--tag-bg);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin: 0.2rem;
+            border: 1px solid var(--accent-violet);
+        }
+
+        @media print {
+            .toolbar, .social-links, .modal, #particles-js, .back-to-top, .carousel-btn { display: none; }
+        }
+        @media (max-width: 1024px) {
+            .tools-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .tools-grid { grid-template-columns: repeat(2, 1fr); }
             .grid-2col { grid-template-columns: 1fr; }
             .hero-content { flex-direction: column; text-align: center; }
-            .typewriter { white-space: normal; border-right: none; }
+            .proyecto-card { flex: 0 0 260px; }
+            .carousel-container { padding: 0.5rem 0; }
+        }
+        @media (max-width: 480px) {
+            .tools-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    
+    <!-- Toolbar -->
     <div class="toolbar">
         <button class="tool-btn" id="darkModeToggle"><i class="fas fa-moon"></i> Modo Oscuro</button>
         <button class="tool-btn" id="downloadPDF"><i class="fas fa-file-pdf"></i> Descargar PDF</button>
     </div>
 
+    <!-- Header -->
     <div class="hero">
         <div id="particles-js"></div>
         <div class="hero-content">
-         <img class="profile-img" src="https://i.postimg.cc/6QgJg1S7/PERFIL-GENERAL.jpg" alt="Ignacio Heit" onerror="this.src='https://ui-avatars.com/api/?background=6c63ff&color=fff&name=Ignacio+Heit&size=140&length=2'">
+            <img class="profile-img" src="https://i.postimg.cc/6QgJg1S7/PERFIL-GENERAL.jpg" alt="Ignacio Heit" onerror="this.src='https://ui-avatars.com/api/?background=6c63ff&color=fff&name=Ignacio+Heit&size=140&length=2'">
             <div class="hero-info">
                 <h1>Ignacio Heit</h1>
-                <div class="tagline" id="typewriterTarget"></div>
-                <p>Especialista en IT con sólida trayectoria en infraestructura crítica, virtualización y ciberseguridad.</p>
+                <p>Especialista en Soporte IT | Administrador de Infraestructura y Redes</p>
                 <div class="contact-info">
-                    <span><i class="fas fa-phone-alt"></i> 351 3834217</span>
-                    <span><i class="fas fa-envelope"></i> nanetsistemas@hotmail.com</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Córdoba, Argentina</span>
+                    <a href="tel:+543513834217"><i class="fas fa-phone-alt"></i> 351 3834217</a>
+                    <a href="mailto:nanetsistemas@hotmail.com"><i class="fas fa-envelope"></i> nanetsistemas@hotmail.com</a>
+                    <span><i class="fas fa-map-marker-alt"></i> Córdoba, Córdoba</span>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Stats -->
     <div class="stats-row" data-aos="fade-up">
         <div class="stat-item"><h3>6+</h3><p>Años de experiencia</p></div>
         <div class="stat-item"><h3>10+</h3><p>Proyectos completados</p></div>
         <div class="stat-item"><h3>15+</h3><p>Certificaciones</p></div>
         <div class="stat-item"><h3>50+</h3><p>Clientes atendidos</p></div>
+    </div>
+
+    <!-- ===== STACK TECNOLÓGICO - 12 ITEMS SIMÉTRICO ===== -->
+    <div class="section" data-aos="fade-up">
+        <div class="section-title">Stack Tecnológico</div>
+        <div class="tools-grid">
+            <!-- Items existentes -->
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-server"></i></div>
+                <h4>Windows Server</h4>
+                <p>AD, DNS, DHCP, GPO</p>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fab fa-linux"></i></div>
+                <h4>Linux</h4>
+                <p>Red Hat / Ubuntu</p>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-network-wired"></i></div>
+                <h4>Networking</h4>
+                <p>Mikrotik / Fortigate</p>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-code"></i></div>
+                <h4>PowerShell / Bash</h4>
+                <p>Automatización</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>Fortigate / Palo Alto</h4>
+                <p>Ciberseguridad</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-chart-line"></i></div>
+                <h4>Zabbix / Grafana</h4>
+                <p>Monitoreo SNMP</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-database"></i></div>
+                <h4>Veeam Backup</h4>
+                <p>Backup & Replication</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-cloud"></i></div>
+                <h4>Proxmox / VMware</h4>
+                <p>Virtualización</p>
+            </div>
+            <!-- NUEVOS ITEMS: Desarrollo Web, Aplicaciones y Ciberseguridad -->
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fab fa-html5"></i></div>
+                <h4>HTML5 / CSS3</h4>
+                <p>Maquetación moderna</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fab fa-js"></i></div>
+                <h4>JavaScript / React</h4>
+                <p>Frontend interactivo</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fab fa-python"></i></div>
+                <h4>Python / Django</h4>
+                <p>Backend y APIs</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h4>Node.js / Express</h4>
+                <p>Aplicaciones web</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-laptop-code"></i></div>
+                <h4>Git / GitHub</h4>
+                <p>Control de versiones</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-lock"></i></div>
+                <h4>Penetration Testing</h4>
+                <p>Seguridad ofensiva</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-eye"></i></div>
+                <h4>OWASP / ZAP</h4>
+                <p>Seguridad web</p>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon"><i class="fas fa-vulnerability"></i></div>
+                <h4>Nmap / Wireshark</h4>
+                <p>Análisis de redes</p>
+            </div>
+        </div>
     </div>
 
     <div class="grid-2col">
@@ -388,24 +671,20 @@
                     <small>Oversystem (Entre Ríos) | 2018 - 2020</small>
                 </div>
             </div>
-
-            <div class="section" data-aos="fade-right">
-                <div class="section-title">Competencias</div>
-                <div class="skill-item"><div class="skill-name">Windows Server</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div></div>
-                <div class="skill-item"><div class="skill-name">Linux</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div></div>
-                <div class="skill-item"><div class="skill-name">Networking</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div></div>
-            </div>
-
-            <div class="section" data-aos="fade-right">
-                <div class="section-title">Herramientas</div>
-                <span class="skill-badge">Mikrotik</span> <span class="skill-badge">Fortigate</span> <span class="skill-badge">Veeam</span> <span class="skill-badge">PowerShell</span> <span class="skill-badge">Linux</span> <span class="skill-badge">Zabbix</span>
-            </div>
         </div>
 
         <div>
             <div class="section" data-aos="fade-left">
                 <div class="section-title">Certificaciones</div>
-                <div class="skill-badge">Fortinet NSE 2</div> <div class="skill-badge">Fortinet NSE 1</div> <div class="skill-badge">DevOps Codecademy</div> <div class="skill-badge">AWS DevOps</div> <div class="skill-badge">Cloud Computing Google</div>
+                <span class="skill-badge">Fortinet NSE 2</span> <span class="skill-badge">Fortinet NSE 1</span> <span class="skill-badge">DevOps Codecademy</span> <span class="skill-badge">AWS DevOps</span> <span class="skill-badge">Cloud Computing Google</span>
+                <span class="skill-badge">EducacionIT DevOps</span> <span class="skill-badge">Udemy Seguridad</span>
+            </div>
+
+            <div class="section" data-aos="fade-left">
+                <div class="section-title">Formación</div>
+                <div><strong>Desarrollo Web y Aplicaciones Digitales</strong><br>Instituto Superior y Politécnico de Córdoba | 2019-2021</div>
+                <div style="margin-top:0.8rem;"><strong>Fortinet NSE 1 &amp; NSE 2</strong><br>Fortinet Learning (Online) | 2024</div>
+                <div style="margin-top:0.8rem;"><strong>Idiomas</strong><br>Español: Nativo | Inglés: Intermedio</div>
             </div>
 
             <div class="section" data-aos="fade-left">
@@ -417,10 +696,42 @@
             </div>
         </div>
     </div>
-    <footer style="text-align:center; margin-top:2rem; opacity:0.7;">Ignacio Heit -  Córdoba, Ciudad de Córdoba, Argentina</footer>
+
+    <!-- ===== SECCIÓN PROYECTOS CENTRADA ===== -->
+    <div class="section proyectos-section" data-aos="fade-up">
+        <div class="section-title">Mis Proyectos</div>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <div class="proyecto-card" data-proyecto="1">
+                    <div class="proyecto-icono">?</div>
+                    <h3>...</h3>
+                    <p>Próximamente</p>
+                    <span class="proyecto-badge">Próximamente</span>
+                </div>
+                <div class="proyecto-card" data-proyecto="2">
+                    <div class="proyecto-icono">?</div>
+                    <h3>...</h3>
+                    <p>Próximamente</p>
+                    <span class="proyecto-badge">Próximamente</span>
+                </div>
+                <div class="proyecto-card" data-proyecto="3">
+                    <div class="proyecto-icono">?</div>
+                    <h3>...</h3>
+                    <p>Próximamente</p>
+                    <span class="proyecto-badge">Próximamente</span>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+        </div>
+    </div>
+
+    <footer style="text-align:center; margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border-color); opacity:0.7;">
+        Ignacio Heit | <i class="fas fa-code"></i>
+    </footer>
 </div>
 
-<!-- Modal -->
+<!-- Modal Empresas -->
 <div id="jobModal" class="modal">
     <div class="modal-content">
         <h3 id="modalTitle"></h3>
@@ -429,10 +740,26 @@
     </div>
 </div>
 
+<!-- Modal Proyectos -->
+<div id="proyectoModal" class="modal">
+    <div class="modal-content">
+        <h3 id="proyectoModalTitle"></h3>
+        <p id="proyectoModalDesc"></p>
+        <p style="margin-top: 1rem; color: var(--accent-orange);"><i class="fas fa-code-branch"></i> Demo y documentación próximamente</p>
+        <button class="close-modal" onclick="closeProyectoModal()">Cerrar</button>
+    </div>
+</div>
+
+<!-- Botón Volver Arriba -->
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 800, once: true });
 
+    // Partículas
     particlesJS("particles-js", {
         particles: {
             number: { value: 50 },
@@ -445,40 +772,21 @@
         interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
     });
 
-    // Máquina de escribir
-    const texts = ["Especialista en Soporte IT", "Sysadmin Ssr", "DevOps en formación"];
-    let idx = 0, charIdx = 0;
-    function typeWriter() {
-        let target = document.getElementById("typewriterTarget");
-        if (charIdx < texts[idx].length) {
-            target.innerHTML += texts[idx].charAt(charIdx);
-            charIdx++;
-            setTimeout(typeWriter, 80);
-        } else {
-            setTimeout(() => {
-                idx = (idx + 1) % texts.length;
-                charIdx = 0;
-                target.innerHTML = "";
-                typeWriter();
-            }, 2000);
-        }
-    }
-    typeWriter();
-
-    // Animación barras
+    // Animación barras de habilidades
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.querySelectorAll('.skill-bar-fill').forEach(fill => {
-                    fill.style.width = fill.getAttribute('data-width') + '%';
+                    const width = fill.getAttribute('data-width');
+                    if (width) fill.style.width = width + '%';
                 });
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('.section').forEach(s => observer.observe(s));
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.tool-item, .section').forEach(s => observer.observe(s));
 
-    // MODAL con detalles de cada empresa
+    // Modal empresas
     const modal = document.getElementById('jobModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalTasks = document.getElementById('modalTasks');
@@ -533,20 +841,46 @@
         }
     }
 
-    function closeModal() {
-        modal.style.display = 'none';
-    }
+    function closeModal() { modal.style.display = 'none'; }
 
     document.querySelectorAll('.job-clickable').forEach(el => {
-        el.addEventListener('click', () => {
-            const job = el.getAttribute('data-job');
-            openModal(job);
-        });
+        el.addEventListener('click', () => openModal(el.getAttribute('data-job')));
+    });
+
+    // Modal proyectos
+    const proyectoModal = document.getElementById('proyectoModal');
+    const proyectoModalTitle = document.getElementById('proyectoModalTitle');
+    const proyectoModalDesc = document.getElementById('proyectoModalDesc');
+
+    const proyectosInfo = {
+        1: { title: "Próximamente", desc: "Próximamente" },
+        2: { title: "Próximamente", desc: "Próximamente" },
+        3: { title: "Próximamente", desc: "Próximamente." }
+    };
+
+    function openProyectoModal(id) {
+        const data = proyectosInfo[id];
+        if (data) {
+            proyectoModalTitle.innerText = data.title;
+            proyectoModalDesc.innerText = data.desc;
+            proyectoModal.style.display = 'flex';
+        }
+    }
+
+    function closeProyectoModal() { proyectoModal.style.display = 'none'; }
+
+    document.querySelectorAll('.proyecto-card').forEach(card => {
+        card.addEventListener('click', () => openProyectoModal(card.getAttribute('data-proyecto')));
     });
 
     window.onclick = function(event) {
         if (event.target === modal) closeModal();
+        if (event.target === proyectoModal) closeProyectoModal();
     };
+
+    // Carrusel
+    const carousel = document.getElementById('carousel');
+    function moveCarousel(direction) { carousel.scrollBy({ left: direction * 300, behavior: 'smooth' }); }
 
     // Dark mode
     const darkToggle = document.getElementById('darkModeToggle');
@@ -561,6 +895,13 @@
         const element = document.querySelector('.container');
         html2pdf().from(element).set({ margin: 0.5, filename: 'CV_Ignacio_Heit.pdf', html2canvas: { scale: 2 } }).save();
     });
+
+    // Volver arriba
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 </body>
 </html>
