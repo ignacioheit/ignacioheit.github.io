@@ -440,7 +440,7 @@
       gap: 16px;
     }
 
-    .proyecto-card {
+    .project-card {
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       padding: 20px;
@@ -449,13 +449,13 @@
       transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
 
-    .proyecto-card:hover {
+    .project-card:hover {
       transform: translateY(-3px);
       border-color: rgba(30, 64, 175, 0.35);
       box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
     }
 
-    .proyecto-icono {
+    .project-icon {
       width: 46px;
       height: 46px;
       border-radius: 14px;
@@ -466,19 +466,19 @@
       margin-bottom: 14px;
     }
 
-    .proyecto-card h3 {
+    .project-card h3 {
       font-size: 1rem;
       margin-bottom: 6px;
       color: var(--text);
     }
 
-    .proyecto-card p {
+    .project-card p {
       color: var(--muted);
       font-size: 0.9rem;
       margin-bottom: 12px;
     }
 
-    .proyecto-badge {
+    .project-badge {
       display: inline-flex;
       padding: 6px 10px;
       border-radius: 999px;
@@ -737,23 +737,23 @@
     <section class="section" aria-label="Proyectos destacados">
       <div class="section-title">Proyectos destacados</div>
       <div class="projects-grid">
-        <article class="proyecto-card" data-proyecto="1">
-          <div class="proyecto-icono"><i class="fa-solid fa-server"></i></div>
-          <h3>Infraestructura & monitoreo</h3>
-          <p>Documentación de implementaciones, monitoreo, backups y continuidad operativa.</p>
-          <span class="proyecto-badge">Próximamente</span>
+        <article class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-server"></i></div>
+          <h3>Próximamente</h3>
+          <p>Documentación y casos reales serán publicados próximamente.</p>
+          <span class="project-badge">Próximamente</span>
         </article>
-        <article class="proyecto-card" data-proyecto="2">
-          <div class="proyecto-icono"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3>Seguridad & hardening</h3>
-          <p>Buenas prácticas, accesos seguros, VPN, firewalling y análisis de superficie.</p>
-          <span class="proyecto-badge">Próximamente</span>
+        <article class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Próximamente</h3>
+          <p>Documentación y casos reales serán publicados próximamente.</p>
+          <span class="project-badge">Próximamente</span>
         </article>
-        <article class="proyecto-card" data-proyecto="3">
-          <div class="proyecto-icono"><i class="fa-solid fa-code"></i></div>
-          <h3>Automatización IT</h3>
-          <p>Scripts y procesos para reducir tareas repetitivas y acelerar soporte técnico.</p>
-          <span class="proyecto-badge">Próximamente</span>
+        <article class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <h3>Próximamente</h3>
+          <p>Documentación y casos reales serán publicados próximamente.</p>
+          <span class="project-badge">Próximamente</span>
         </article>
       </div>
     </section>
@@ -776,14 +776,6 @@
       <h3 id="skillModalTitle"></h3>
       <p id="skillModalDesc"></p>
       <button class="close-modal" type="button" onclick="closeSkillModal()">Cerrar</button>
-    </div>
-  </div>
-
-  <div id="proyectoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="proyectoModalTitle">
-    <div class="modal-content">
-      <h3 id="proyectoModalTitle"></h3>
-      <p id="proyectoModalDesc"></p>
-      <button class="close-modal" type="button" onclick="closeProyectoModal()">Cerrar</button>
     </div>
   </div>
 
@@ -898,52 +890,15 @@
       el.addEventListener('click', () => openSkillModal(el.dataset.skill));
     });
 
-    const proyectoModal = document.getElementById('proyectoModal');
-    const proyectoModalTitle = document.getElementById('proyectoModalTitle');
-    const proyectoModalDesc = document.getElementById('proyectoModalDesc');
-
-    const proyectosInfo = {
-      1: {
-        title: 'Infraestructura & monitoreo',
-        desc: 'Espacio reservado para mostrar implementaciones, documentación técnica, tableros de monitoreo y mejoras de continuidad operativa.'
-      },
-      2: {
-        title: 'Seguridad & hardening',
-        desc: 'Espacio reservado para documentar buenas prácticas de seguridad, VPN, firewalling, hardening y análisis preventivo.'
-      },
-      3: {
-        title: 'Automatización IT',
-        desc: 'Espacio reservado para scripts, automatizaciones y procesos que reduzcan trabajo manual en soporte e infraestructura.'
-      }
-    };
-
-    function openProyectoModal(id) {
-      const data = proyectosInfo[id];
-      if (!data) return;
-      proyectoModalTitle.textContent = data.title;
-      proyectoModalDesc.textContent = data.desc;
-      proyectoModal.style.display = 'flex';
-    }
-
-    function closeProyectoModal() {
-      proyectoModal.style.display = 'none';
-    }
-
-    document.querySelectorAll('.proyecto-card').forEach(card => {
-      card.addEventListener('click', () => openProyectoModal(card.dataset.proyecto));
-    });
-
     window.addEventListener('click', event => {
       if (event.target === jobModal) closeModal();
       if (event.target === skillModal) closeSkillModal();
-      if (event.target === proyectoModal) closeProyectoModal();
     });
 
     window.addEventListener('keydown', event => {
       if (event.key === 'Escape') {
         closeModal();
         closeSkillModal();
-        closeProyectoModal();
       }
     });
 
